@@ -96,7 +96,7 @@ class CD extends Media {
 
 class Catalog {
     constructor(mediaList) {
-        this._MyCatalog = [];
+        this._MyCatalog = mediaList;
     }
 
     get mediaList() {
@@ -136,7 +136,7 @@ cd.addRating(4);
 console.log(cd.getAverageRating());
 console.log(CD.shuffle(cd.songs));
 
-const catalog = new Catalog();
+const catalog = new Catalog([]);
 catalog.mediaList = historyOfEverything;
 catalog.mediaList = speed;
 catalog.mediaList = cd;
